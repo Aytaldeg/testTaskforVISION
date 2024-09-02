@@ -1,0 +1,116 @@
+$suse-bold: "SUSE-Bold";
+@font-face {
+  font-family: "SUSE-Bold";
+  src: url("./assets/fonts/SUSE-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+$suse-medium: "SUSE-Medium";
+@font-face {
+  font-family: "SUSE-Medium";
+  src: url("./assets/fonts/SUSE-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+$suse-regular: "SUSE-Regular";
+@font-face {
+  font-family: "SUSE-Regular";
+  src: url("./assets/fonts/SUSE-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.categories {
+  background-color: antiquewhite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  &-title {
+    font-family: $suse-bold;
+    font-size: 10vh;
+    margin-top: 30vh;
+  }
+  &-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    font-family: $suse-medium;
+    font-size: 4vh;
+    align-items: center;
+    &-item {
+      text-decoration: none;
+      transition: 0.5s;
+      &:hover {
+        text-decoration: underline;
+        transition: 0.5s;
+        font-size: 5vh;
+      }
+    }
+  }
+}
+.model {
+  background-color: antiquewhite;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  &-back {
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    text-decoration: none;
+    color: #000;
+    font-family: $suse-regular;
+    font-size: 3vh;
+    transition: 0.3s;
+    &:hover {
+      text-decoration-line: underline;
+      transition: 0.3s;
+    }
+  }
+  &-title {
+    font-family: $suse-bold;
+    font-size: 12vh;
+    margin-top: 12vh;
+  }
+  &-sort {
+    font-family: $suse-regular;
+    font-size: 3vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    &-arrowUp {
+      background-image: url("./assets/icons/arrow-narrow-up.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+    }
+    &-arrowDown {
+      background-image: url("./assets/icons/arrow-narrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &-tip {
+    font-family: $suse-medium;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    &-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 5vw;
+  
+    }
+  }
+}
